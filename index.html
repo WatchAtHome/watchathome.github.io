@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Watch At Home</title>
   <style>
     body {
@@ -12,65 +12,64 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      height: 100vh;
+      color: #fff;
+      text-align: center;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      height: 100vh;
     }
 
-    .overlay {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 40px 20px;
+    .content {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
       border-radius: 15px;
-      text-align: center;
-      color: #fff;
       max-width: 90%;
     }
 
     h1 {
-      font-size: 2.8em;
-      margin-bottom: 15px;
+      font-size: 3em;
+      margin: 0 0 10px;
     }
 
     p {
       font-size: 1.2em;
-      margin-bottom: 25px;
+      margin: 0 0 20px;
     }
 
-    .whatsapp-btn {
+    a.whatsapp-button {
+      display: inline-block;
       background-color: #25D366;
       color: white;
-      padding: 12px 25px;
-      font-size: 1em;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 1.1em;
       text-decoration: none;
-      border-radius: 8px;
-      display: inline-block;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
       transition: background-color 0.3s ease;
     }
 
-    .whatsapp-btn:hover {
-      background-color: #1da851;
+    a.whatsapp-button:hover {
+      background-color: #1ebe5d;
     }
 
     @media (max-width: 600px) {
       h1 {
         font-size: 2em;
       }
+
       p {
         font-size: 1em;
-      }
-      .whatsapp-btn {
-        font-size: 0.9em;
-        padding: 10px 20px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
+  <div class="content">
     <h1>Welcome to Watch At Home</h1>
     <p>Your gateway to world-class entertainment — Anytime, Anywhere!</p>
-    <a class="whatsapp-btn" href="https://wa.me/201557572768" target="_blank">
+    <a class="whatsapp-button" href="https://wa.me/201557572768" target="_blank">
       Contact us on WhatsApp
     </a>
   </div>

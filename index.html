@@ -2,46 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Watch At Home</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      color: #fff;
-      text-align: center;
-      background-color: #000;
-    }
-
-    .header {
-      background-image: url('https://watchathome.github.io/20250520_1636_Family%20TV%20Time_remix_01jvpyf7e1e0csxf1n5xr1td7j.png');
+      background-image: url('20250520_1636_Family%20TV%20Time_remix_01jvpyf7e1e0csxf1n5xr1td7j.png');
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    .content {
+    .overlay {
       background: rgba(0, 0, 0, 0.5);
-      padding: 30px;
+      padding: 40px 20px;
       border-radius: 15px;
+      text-align: center;
+      color: #fff;
       max-width: 90%;
     }
 
     h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
+      font-size: 2.8em;
+      margin-bottom: 15px;
     }
 
     p {
       font-size: 1.2em;
+      margin-bottom: 25px;
+    }
+
+    .whatsapp-btn {
+      background-color: #25D366;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1em;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1da851;
     }
 
     @media (max-width: 600px) {
@@ -51,15 +59,20 @@
       p {
         font-size: 1em;
       }
+      .whatsapp-btn {
+        font-size: 0.9em;
+        padding: 10px 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="header">
-    <div class="content">
-      <h1>Welcome to Watch At Home</h1>
-      <p>Your gateway to world-class entertainment — Anytime, Anywhere!</p>
-    </div>
+  <div class="overlay">
+    <h1>Welcome to Watch At Home</h1>
+    <p>Your gateway to world-class entertainment — Anytime, Anywhere!</p>
+    <a class="whatsapp-btn" href="https://wa.me/201557572768" target="_blank">
+      Contact us on WhatsApp
+    </a>
   </div>
 </body>
 </html>

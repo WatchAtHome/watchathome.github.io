@@ -5,73 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Watch At Home</title>
   <style>
-    body {
+    body, html {
       margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: Arial, sans-serif;
-      background-image: url('20250520_1636_Family%20TV%20Time_remix_01jvpyf7e1e0csxf1n5xr1td7j.png');
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://watchathome.github.io/background.jpg');
       background-size: cover;
       background-position: center;
-      background-repeat: no-repeat;
-      color: #fff;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      z-index: -1;
+      filter: brightness(0.6);
     }
 
     .content {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 30px;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px 40px;
       border-radius: 15px;
       max-width: 90%;
+      text-align: center;
     }
 
     h1 {
-      font-size: 3em;
+      font-size: 2.5em;
       margin: 0 0 10px;
     }
 
     p {
       font-size: 1.2em;
-      margin: 0 0 20px;
+      margin: 0 0 15px;
     }
 
-    a.whatsapp-button {
-      display: inline-block;
-      background-color: #25D366;
+    button {
+      background-color: #25d366;
+      border: none;
       color: white;
-      padding: 12px 24px;
-      border-radius: 30px;
-      font-size: 1.1em;
-      text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      padding: 12px 25px;
+      font-size: 1em;
+      border-radius: 25px;
+      cursor: pointer;
       transition: background-color 0.3s ease;
     }
 
-    a.whatsapp-button:hover {
-      background-color: #1ebe5d;
+    button:hover {
+      background-color: #1ebe5b;
     }
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 2em;
+        font-size: 1.8em;
       }
 
       p {
         font-size: 1em;
       }
+
+      .content {
+        padding: 15px 20px;
+        bottom: 20px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="background"></div>
   <div class="content">
     <h1>Welcome to Watch At Home</h1>
     <p>Your gateway to world-class entertainment — Anytime, Anywhere!</p>
-    <a class="whatsapp-button" href="https://wa.me/201557572768" target="_blank">
-      Contact us on WhatsApp
-    </a>
+    <button onclick="window.open('https://wa.me/01557572768', '_blank')">Contact us on WhatsApp</button>
   </div>
 </body>
 </html>

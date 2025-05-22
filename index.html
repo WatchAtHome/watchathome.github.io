@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Watch At Home</title>
   <style>
     * {
@@ -13,31 +13,33 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #f5f5f5;
       color: #333;
       text-align: center;
     }
 
-    .hero-image {
+    .hero {
+      position: relative;
       width: 100%;
-      height: auto;
-      display: block;
+      height: 100vh;
+      background-image: url('qw.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
     }
 
-    .welcome-section {
-      padding: 30px 20px;
-      background-color: #ffffff;
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      padding: 20px;
     }
 
-    .welcome-section h1 {
-      font-size: 26px;
+    .hero-overlay h1 {
+      font-size: 36px;
+      color: #fff;
       margin-bottom: 10px;
-    }
-
-    .welcome-section p {
-      font-size: 16px;
-      margin-bottom: 20px;
-      color: #444;
     }
 
     .whatsapp-button {
@@ -48,43 +50,102 @@
       font-size: 16px;
       text-decoration: none;
       border-radius: 8px;
-      transition: 0.3s;
+      margin-top: 10px;
     }
 
-    .whatsapp-button:hover {
-      background-color: #1ebc57;
+    .section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
     }
 
-    @media (max-width: 768px) {
-      .welcome-section h1 {
-        font-size: 22px;
-      }
+    .section h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
 
-      .welcome-section p {
-        font-size: 14px;
-      }
+    .section p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #555;
+    }
 
-      .whatsapp-button {
-        font-size: 14px;
-        padding: 10px 20px;
-      }
+    .box {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      margin-top: 20px;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Full image shown with no overlay -->
-  <img src="qw.png" alt="Watch At Home" class="hero-image" />
+  <!-- 1. Hero Section with logo and background -->
+  <div class="hero">
+    <div class="hero-overlay">
+      <h1>Watch At Home</h1>
+      <a href="https://wa.me/201557572768" class="whatsapp-button">Contact us on WhatsApp</a>
+    </div>
+  </div>
 
-  <!-- Welcome + WhatsApp section -->
-  <div class="welcome-section">
-    <h1>Welcome to Watch At Home</h1>
+  <!-- 2. Welcome Section -->
+  <div class="section">
+    <h2>Welcome to Watch At Home</h2>
     <p>Your gateway to world-class entertainment — Anytime, Anywhere!</p>
-    <a href="https://wa.me/201557572768" class="whatsapp-button">Contact us on WhatsApp</a>
+    <a href="https://wa.me/201557572768" class="whatsapp-button">Start Watching Now</a>
+  </div>
+
+  <!-- 3. Fire Stick Promo Video -->
+  <div class="section">
+    <h2>Discover Fire Stick 4K Max</h2>
+    <p>Watch the video to see how easy it is to upgrade your TV experience.</p>
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+  </div>
+
+  <!-- 4. Fire Stick Offer -->
+  <div class="section box">
+    <h2>Special Offer – All-in-One TV Solution</h2>
+    <p>
+      Get the <strong>Amazon Fire Stick 4K Max</strong><br>
+      with <strong>1-Year Full Access</strong> to movies, series, live sports & international channels
+    </p>
+    <p style="font-size:20px; color:#008000; font-weight:bold;">All for just EGP 6,500</p>
+    <p style="font-size:15px; color:#777;">Annual Renewal: <strong>$35/year</strong></p>
+    <a href="https://wa.me/201557572768" class="whatsapp-button">Order Now on WhatsApp</a>
+  </div>
+
+  <!-- 5. Placeholder for Future Hotel Section -->
+  <div class="section box">
+    <h2>Hotel Packages (Coming Soon)</h2>
+    <p>Customized offers for resorts and hotels – Streamline your guest entertainment experience.</p>
+  </div>
+
+  <!-- 6. Subscribe Section -->
+  <div class="section">
+    <h2>Subscribe to our Channel</h2>
+    <p>Stay updated with our latest offers and tutorials on YouTube.</p>
+    <a href="https://www.youtube.com/@YOUR_CHANNEL" class="whatsapp-button" target="_blank">Subscribe Now</a>
+  </div>
+
+  <!-- 7. Final Contact Section -->
+  <div class="section">
+    <h2>Need help or have questions?</h2>
+    <p>Contact us anytime and we’ll guide you through.</p>
+    <a href="https://wa.me/201557572768" class="whatsapp-button">Chat on WhatsApp</a>
   </div>
 
 </body>
 </html>
+
 
 
 

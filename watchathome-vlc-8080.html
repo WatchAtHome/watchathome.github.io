@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Watch At Home - VLC Ready</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin: auto;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="passwordScreen">
+    <h2>Welcome to Watch At Home</h2>
+    <p>Please enter your access password</p>
+    <input type="password" id="accessPass" placeholder="Enter password" />
+    <button onclick="checkPassword()">Enter</button>
+    <p id="errorMsg" style="color:red;"></p>
+  </div>
+
+  <div class="container hidden" id="loginScreen">
+    <h2>IPTV Login</h2>
+    <input type="text" id="server" placeholder="Server Domain Only (e.g. http://myserver.com)" />
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="generateLink()">Generate Link</button>
+    <button onclick="copyToClipboard()">Copy Link</button>
+    <p id="output" style="word-wrap: break-word; margin-top: 10px;"></p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const pass = document.getElementById('accessPass').value;
+      if (pass === 'watch@2025') {
+        document.getElementById('passwordScreen').classList.add('hidden');
+        document.getElementById('loginScreen').classList.remove('hidden');
+      } else {
+        document.getElementById('errorMsg').innerText = 'Incorrect password';
+      }
+    }
+
+    function generateLink() {
+      const server = document.getElementById('server').value.trim().replace(/\/$/, '');
+      const user = document.getElementById('username').value.trim();
+      const pass = document.getElementById('password').value.trim();
+      if (server && user && pass) {
+        const link = `${server}:8080/live/${user}/${pass}/`;
+        document.getElementById('output').innerText = link;
+      } else {
+        document.getElementById('output').innerText = 'Please fill all fields';
+      }
+    }
+
+    function copyToClipboard() {
+      const text = document.getElementById('output').innerText;
+      if (text) {
+        navigator.clipboard.writeText(text);
+        alert("Link copied to clipboard!");
+      } else {
+        alert("Nothing to copy!");
+      }
+    }
+  </script>
+
+</body>
+</html>

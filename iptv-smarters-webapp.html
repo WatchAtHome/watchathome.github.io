@@ -1,81 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login to IPTV Smarters</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watch At Home - IPTV Access</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      padding: 20px;
-    }
-    .container {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      max-width: 400px;
-      width: 100%;
+      background-color: #f1f1f1;
       text-align: center;
+      padding: 50px;
     }
-    input {
-      width: 100%;
+    h1 {
+      color: #333;
+    }
+    input, button {
       padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      margin: 10px;
+      font-size: 1rem;
     }
     button {
-      background-color: #007bff;
+      background-color: #4CAF50;
       color: white;
-      padding: 10px 20px;
       border: none;
-      border-radius: 5px;
       cursor: pointer;
-      width: 100%;
     }
     button:hover {
-      background-color: #0056b3;
-    }
-    .instructions {
-      margin-top: 20px;
-      font-size: 14px;
-      color: #555;
+      background-color: #45a049;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Watch At Home - IPTV Login</h2>
-    <input type="text" id="server" placeholder="Server (e.g. example.com)">
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
-    <button onclick="openWebApp()">Open Smarters Web App</button>
-    <div class="instructions">
-      You'll be redirected to the official Smarters Web App. <br>
-      Please enter the same details there to start watching.
-    </div>
-  </div>
+  <h1>Watch At Home - IPTV Launcher</h1>
+  <p>Enter your login details to launch IPTV Smarters Web App</p>
+  <input type="text" id="username" placeholder="Username" /><br />
+  <input type="password" id="password" placeholder="Password" /><br />
+  <input type="text" id="server" placeholder="Server URL (without / at end)" value="http://example.com:8080" /><br />
+  <button onclick="launchIPTV()">Launch IPTV App</button>
 
   <script>
-    function openWebApp() {
-      const server = document.getElementById("server").value.trim();
-      const username = document.getElementById("username").value.trim();
-      const password = document.getElementById("password").value.trim();
+    function launchIPTV() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      const server = document.getElementById('server').value;
 
-      if (!server || !username || !password) {
-        alert("Please fill in all fields.");
-        return;
+      if (user && pass && server) {
+        const fullUrl = `https://webplayer.smarters.pro/login?username=${encodeURIComponent(user)}&password=${encodeURIComponent(pass)}&url=${encodeURIComponent(server)}`;
+        window.location.href = fullUrl;
+      } else {
+        alert("Please enter all fields.");
       }
-
-      const win = window.open("https://webtv.iptvsmarters.com", "_blank");
-      alert("Now enter your details manually:\n\nServer: http://" + server + ":8080\nUsername: " + username + "\nPassword: " + password);
     }
   </script>
 </body>

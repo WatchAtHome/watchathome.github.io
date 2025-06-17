@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login to IPTV Smarters</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .instructions {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Watch At Home - IPTV Login</h2>
+    <input type="text" id="server" placeholder="Server (e.g. example.com)">
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="openWebApp()">Open Smarters Web App</button>
+    <div class="instructions">
+      You'll be redirected to the official Smarters Web App. <br>
+      Please enter the same details there to start watching.
+    </div>
+  </div>
+
+  <script>
+    function openWebApp() {
+      const server = document.getElementById("server").value.trim();
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (!server || !username || !password) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      const win = window.open("https://webtv.iptvsmarters.com", "_blank");
+      alert("Now enter your details manually:\n\nServer: http://" + server + ":8080\nUsername: " + username + "\nPassword: " + password);
+    }
+  </script>
+</body>
+</html>

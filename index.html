@@ -141,11 +141,23 @@
   <div class="section">
     <h2>Welcome to Watch At Home</h2>
     <p>Your gateway to world-class entertainment — Anytime, Anywhere!</p>
- <a href="#"
-   onclick="(new Image()).src='https://www.facebook.com/tr?id=1135814355246646&ev=Contact&noscript=1'; setTimeout(function(){ window.open('https://wa.me/201557572768', '_blank'); }, 500); return false;"
+<a href="https://wa.me/201557572768"
+   id="whatsapp-button"
+   target="_blank"
    style="text-decoration: none; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
    Contact us on WhatsApp
 </a>
+
+<script>
+  document.getElementById('whatsapp-button').addEventListener('click', function() {
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Contact');
+    } else {
+      (new Image()).src = 'https://www.facebook.com/tr?id=1135814355246646&ev=Contact&noscript=1';
+    }
+  });
+</script>
+
  </div>
 <!-- 8. Promo Video Section -->
 <div class="section box">

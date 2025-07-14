@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,14 +25,14 @@
     }
     .logo-container {
       background-color: #111;
-      padding: 12px;
-      border-radius: 12px;
-      margin-bottom: 20px;
+      padding: 16px;
+      border-radius: 16px;
+      margin: 0 auto 20px auto;
       display: inline-block;
     }
     .logo {
       display: block;
-      max-width: 120px;
+      max-width: 180px;
       height: auto;
     }
     h2 {
@@ -85,29 +84,28 @@
     <h2>Watch At Home – Get in Touch</h2>
     <form>
       <label for="fullname">Full Name</label>
-      <input type="text" id="fullname" name="fullname" required />
+      <input type="text" id="fullname" name="fullname" required /><label for="email">Email</label>
+  <input type="email" id="email" name="email" required />
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" name="phone" required />
 
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" required />
+  <label for="country">Country</label>
+  <input type="text" id="country" name="country" required />
 
-      <label for="country">Country</label>
-      <input type="text" id="country" name="country" required />
+  <label for="device">Device Type (optional)</label>
+  <select id="device" name="device">
+    <option value="">Select Device</option>
+    <option value="Smart TV">Smart TV</option>
+    <option value="Fire Stick">Fire Stick</option>
+    <option value="TV Box">TV Box</option>
+    <option value="Other">Other</option>
+  </select>
 
-      <label for="device">Device Type (optional)</label>
-      <select id="device" name="device">
-        <option value="">Select Device</option>
-        <option value="Smart TV">Smart TV</option>
-        <option value="Fire Stick">Fire Stick</option>
-        <option value="TV Box">TV Box</option>
-        <option value="Other">Other</option>
-      </select>
+  <button type="submit">Submit</button>
+</form>
+<div class="note">We respect your privacy. Your data is secure.</div>
 
-      <button type="submit">Submit</button>
-    </form>
-    <div class="note">We respect your privacy. Your data is secure.</div>
   </div>
 </body>
 </html>

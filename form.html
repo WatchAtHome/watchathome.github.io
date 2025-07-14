@@ -9,49 +9,17 @@
     body {
       background-color: #ffffff; /* خلفية الصفحة العامة: أبيض */
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
     .container {
-      background-color: #f5f0e6; /* الصندوق: بيج فاتح */
+      background-color: #f5f0e6; /* لون بيج للصندوق الداخلي */
       max-width: 500px;
       margin: 40px auto;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    h1, label {
-      color: #333333;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0 20px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    img {
-      display: block;
-      margin: 0 auto 20px auto;
-      max-width: 120px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
     }
 
     .logo-text {
@@ -61,12 +29,43 @@
       margin-bottom: 25px;
       color: #222;
     }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <img src="logo.png" alt="Watch At Home Logo">
     <div class="logo-text">Watch At Home – Get in Touch</div>
 
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
@@ -85,6 +84,7 @@
 
 </body>
 </html>
+
 
 
 

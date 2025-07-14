@@ -24,14 +24,17 @@
       width: 100%;
       text-align: center;
     }
+    .logo-container {
+      background-color: #111;
+      padding: 12px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
     .logo {
       display: block;
-      margin: 0 auto 20px auto;
       max-width: 120px;
-      background-color: white;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      height: auto;
     }
     h2 {
       text-align: center;
@@ -76,7 +79,9 @@
 </head>
 <body>
   <div class="form-box">
-    <img src="logo.png" alt="Watch At Home Logo" class="logo" />
+    <div class="logo-container">
+      <img src="logo.png" alt="Watch At Home Logo" class="logo" />
+    </div>
     <h2>Watch At Home – Get in Touch</h2>
     <form>
       <label for="fullname">Full Name</label>

@@ -6,77 +6,81 @@
   <title>Watch At Home - Lead Form</title>
   <style>
     body {
-      background-color: #f7f7f7;
+      background-color: #f0f0f0;
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
     }
-    .form-box {
-      background: #fff;
+
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #ffffff;
       padding: 30px 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-      width: 100%;
-      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
+
     h2 {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       color: #333;
     }
+
     label {
-      font-weight: bold;
-      margin-top: 10px;
       display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
       color: #444;
-      text-align: left;
     }
+
     input, select, textarea {
       width: 100%;
       padding: 10px;
-      margin: 8px 0 20px 0;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
       border-radius: 6px;
-      font-size: 16px;
+      font-size: 15px;
     }
+
     button {
       width: 100%;
-      background-color: #28a745;
-      color: white;
       padding: 12px;
+      background-color: #28a745;
+      color: #fff;
       border: none;
       border-radius: 6px;
       font-size: 16px;
       cursor: pointer;
     }
+
     button:hover {
       background-color: #218838;
     }
+
     .note {
-      text-align: center;
       font-size: 13px;
       color: #888;
+      text-align: center;
       margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="form-box">
-    <h2>Watch At Home | Get in Touch</h2>
+  <div class="container">
+    <h2>Watch At Home - Lead Form</h2>
     <form action="https://formspree.io/f/mkgznorz" method="POST">
       <label for="fullname">Full Name</label>
-      <input type="text" id="fullname" name="fullname" required />
+      <input type="text" id="fullname" name="fullname" required>
 
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
+      <input type="email" id="email" name="email" required>
 
-      <label for="country">Country</label>
-      <input type="text" id="country" name="country" required />
+      <label for="whatsapp">WhatsApp Number</label>
+      <input type="text" id="whatsapp" name="whatsapp">
+
+      <label for="country">Country of Residence</label>
+      <input type="text" id="country" name="country" required>
 
       <label for="device">Device Type (optional)</label>
       <select id="device" name="device">
@@ -90,26 +94,13 @@
       <label for="message">Your Message (optional)</label>
       <textarea id="message" name="message" rows="4"></textarea>
 
-      <button type="submit">Submit</button>
+      <button type="submit">Send</button>
     </form>
-    <div class="note">We respect your privacy. Your data is secure.</div>
+    <div class="note">Your info will be kept private and used only for support purposes.</div>
   </div>
 </body>
 </html>
 
-
-  <label>
-    WhatsApp Number:
-    <input type="tel" name="whatsapp" required>
-  </label><br><br>
-
-  <label>
-    Country of Residence:
-    <input type="text" name="country" required>
-  </label><br><br>
-
-  <button type="submit">Send</button>
-</form>
 
 
 

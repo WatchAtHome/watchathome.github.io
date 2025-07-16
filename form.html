@@ -23,6 +23,14 @@
       width: 90%;
       max-width: 420px;
     }
+    .logo {
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    .logo img {
+      max-width: 120px;
+    }
     h2 {
       text-align: center;
       margin-bottom: 0;
@@ -71,12 +79,11 @@
 </head>
 <body>
   <div class="container">
-    <div style="text-align: center;">
-  <img src="logo.png" alt="Watch At Home Logo" style="max-width: 120px; margin-bottom: 10px;" />
-</div>
-<h2>Watch At Home</h2>
-<h3>Lead Form</h3>
-
+    <div class="logo">
+      <img src="logo.png" alt="Watch At Home Logo">
+    </div>
+    <h2>Watch At Home</h2>
+    <h3>Lead Form</h3>
     <form action="https://formspree.io/f/mkgznorz" method="POST">
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" required>
@@ -107,6 +114,7 @@
   </div>
 </body>
 </html>
+
 
 
 

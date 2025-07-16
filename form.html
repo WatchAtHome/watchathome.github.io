@@ -1,68 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Watch At Home - Lead Form</title>
   <style>
     body {
-      background-color: #f0f0f0;
       font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
       margin: 0;
       padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-
     .container {
-      max-width: 600px;
-      margin: 60px auto;
-      background: #ffffff;
+      background-color: #fff;
       padding: 30px 40px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
     }
-
     h2 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       color: #333;
     }
-
     label {
       display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-      color: #444;
+      margin-top: 15px;
+      color: #555;
+      font-size: 14px;
     }
-
     input, select, textarea {
       width: 100%;
       padding: 10px;
-      margin-bottom: 20px;
+      margin-top: 5px;
       border: 1px solid #ccc;
       border-radius: 6px;
-      font-size: 15px;
+      font-size: 14px;
+      box-sizing: border-box;
     }
-
     button {
+      margin-top: 20px;
       width: 100%;
       padding: 12px;
       background-color: #28a745;
-      color: #fff;
+      color: white;
+      font-size: 16px;
       border: none;
       border-radius: 6px;
-      font-size: 16px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
-
     button:hover {
       background-color: #218838;
-    }
-
-    .note {
-      font-size: 13px;
-      color: #888;
-      text-align: center;
-      margin-top: 10px;
     }
   </style>
 </head>
@@ -70,14 +64,14 @@
   <div class="container">
     <h2>Watch At Home - Lead Form</h2>
     <form action="https://formspree.io/f/mkgznorz" method="POST">
-      <label for="fullname">Full Name</label>
-      <input type="text" id="fullname" name="fullname" required>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
 
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required>
 
       <label for="whatsapp">WhatsApp Number</label>
-      <input type="text" id="whatsapp" name="whatsapp">
+      <input type="text" id="whatsapp" name="whatsapp" required>
 
       <label for="country">Country of Residence</label>
       <input type="text" id="country" name="country" required>
@@ -85,10 +79,10 @@
       <label for="device">Device Type (optional)</label>
       <select id="device" name="device">
         <option value="">Select Device</option>
+        <option value="Fire Stick 2nd Gen">Fire Stick 2nd Gen</option>
+        <option value="Fire Stick 3rd Gen">Fire Stick 3rd Gen</option>
         <option value="Smart TV">Smart TV</option>
-        <option value="Fire Stick">Fire Stick</option>
         <option value="TV Box">TV Box</option>
-        <option value="Other">Other</option>
       </select>
 
       <label for="message">Your Message (optional)</label>
@@ -96,7 +90,6 @@
 
       <button type="submit">Send</button>
     </form>
-    <div class="note">Your info will be kept private and used only for support purposes.</div>
   </div>
 </body>
 </html>

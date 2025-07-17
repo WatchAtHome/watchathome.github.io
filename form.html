@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Watch At Home</title>
   <style>
     body {
@@ -27,7 +27,6 @@
     }
     .logo {
       text-align: center;
-      margin-bottom: 00px;
       margin-top: 120px;
     }
     .logo img {
@@ -54,7 +53,7 @@
       color: #555;
       font-size: 14px;
     }
-    input, select, textarea {
+    input, select {
       width: 100%;
       padding: 8px;
       margin-top: 4px;
@@ -78,27 +77,33 @@
     button:hover {
       background-color: #218838;
     }
+    #thanks {
+      display: none;
+      text-align: center;
+      color: green;
+      margin-top: 15px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="logo">
-      <img src="logo.png" alt="Watch At Home Logo">
+      <img src="logo.png" alt="Watch At Home Logo" />
     </div>
     <h2>Watch At Home</h2>
     <h3>Lead Form</h3>
-<form action="https://formspree.io/f/mkgznorz" method="POST" data-formspree>
+    <form action="https://formspree.io/f/mkgznorz" method="POST">
       <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" required />
 
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" required />
 
       <label for="whatsapp">WhatsApp Number</label>
-      <input type="text" id="whatsapp" name="whatsapp" required>
+      <input type="text" id="whatsapp" name="whatsapp" required />
 
       <label for="country">Country of Residence</label>
-      <input type="text" id="country" name="country" required>
+      <input type="text" id="country" name="country" required />
 
       <label for="device">Device Type (optional)</label>
       <select id="device" name="device">
@@ -108,54 +113,55 @@
         <option value="Smart TV">Smart TV</option>
         <option value="TV Box">TV Box</option>
       </select>
+
       <button type="submit">Send</button>
-  <p id="thanks" style="display:none; text-align:center; color:green; margin-top:15px;">
-  Thanks for your message! We will get back to you soon via email and WhatsApp.
-</p>
+      <p id="thanks">Thanks for your message! We will get back to you soon via email and WhatsApp.</p>
     </form>
   </div>
-  <script>
-  window.addEventListener("load", function () {
-    const form = document.querySelector("form[data-formspree]");
-    const thanks = document.getElementById("thanks");
 
-    if (form && thanks) {
-      form.addEventListener("submit", function (e) {
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("form");
+      const thanks = document.getElementById("thanks");
+
+      form.addEventListener("submit", async function (e) {
         e.preventDefault();
-        const data = new FormData(form);
-        const xhr = new XMLHttpRequest();
-        xhr.open(form.method, form.action);
-        xhr.setRequestHeader("Accept", "application/json");
-        xhr.onreadystatechange = function () {
-          if (xhr.readyState !== XMLHttpRequest.DONE) return;
-          if (xhr.status === 200) {
-            form.reset();
-            thanks.style.display = "block";
+        const formData = new FormData(form);
+
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
           }
-        };
-        xhr.send(data);
+        });
+
+        if (response.ok) {
+          form.reset();
+          thanks.style.display = "block";
+        }
       });
-    }
-  });
-</script>
-    <!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-   fbq('init', '1135814355246646'); 
-   fbq('track', 'PageView');
-</script>
-<noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1135814355246646&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
+    });
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1135814355246646'); 
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1135814355246646&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
 </body>
 </html>
 

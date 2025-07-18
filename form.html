@@ -136,15 +136,10 @@
           }
         });
 
-       if (response.ok) {
-  fbq('track', 'Lead', {
-    content_name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    phone: document.getElementById("whatsapp").value,
-    country: document.getElementById("country").value
-  });
+   if (response.ok) {
   form.reset();
   thanks.style.display = "block";
+  fbq('track', 'Lead');
 }
       });
     });

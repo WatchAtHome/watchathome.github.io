@@ -139,6 +139,7 @@
         if (response.ok) {
           form.reset();
           thanks.style.display = "block";
+          fbq('track', 'Lead');
         }
       });
     });

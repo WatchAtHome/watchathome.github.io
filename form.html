@@ -119,31 +119,37 @@
     </form>
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.querySelector("form");
-      const thanks = document.getElementById("thanks");
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const thanks = document.getElementById("thanks");
 
-      form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-        const formData = new FormData(form);
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
 
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-
-   if (response.ok) {
-  form.reset();
-  thanks.style.display = "block";
-  fbq('track', 'Lead');
-}
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
       });
+
+      if (response.ok) {
+        form.reset();
+        thanks.style.display = "block";
+
+        // تشغيل التراك لو fbq متعرفة
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead');
+        } else {
+          console.log('fbq is not defined');
+        }
+      }
     });
-  </script>
+  });
+</script>
 
   <!-- Meta Pixel Code -->
   <script>

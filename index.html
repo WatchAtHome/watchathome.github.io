@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="facebook-domain-verification" content="fb8ul7ng8t7t63jam740dpqqzegz7k" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="facebook-domain-verification" content="fb8ul7ng8t7t63jam740dpqqzegz7k" />
   <title>Watch At Home</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1135814355246646'); 
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1135814355246646&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
       font-family: Arial, sans-serif;
       background-color: #f5f5f5;
       color: #333;
       text-align: center;
     }
-
     .hero {
       position: relative;
       width: 100%;
       height: 80vh;
-     background-image: url('hero-header.jpg');
+      background-image: url('hero-header.jpg');
       background-size: cover;
-      background-position: top;
-      height: 80vh;
+      background-position: center top;
+      display: flex;
       align-items: flex-end;
       justify-content: center;
-
     }
-
     .hero-overlay {
       background-color: rgba(0, 0, 0, 0.15);
       width: 100%;
@@ -42,7 +54,6 @@
       color: #fff;
       margin-bottom: 10px;
     }
-
     .whatsapp-button {
       display: inline-block;
       background-color: #25d366;
@@ -53,24 +64,20 @@
       border-radius: 8px;
       margin-top: 10px;
     }
-
     .section {
       padding: 40px 20px;
       max-width: 800px;
       margin: auto;
     }
-
     .section h2 {
       font-size: 26px;
       margin-bottom: 15px;
     }
-
     .section p {
       font-size: 16px;
       margin-bottom: 20px;
       color: #555;
     }
-
     .box {
       background-color: #ffffff;
       padding: 25px;
@@ -78,89 +85,35 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       margin-top: 20px;
     }
-
-    iframe {
+    iframe, video {
       width: 100%;
-      height: 315px;
-      border: none;
-      margin-top: 20px;
+      height: auto;
       border-radius: 10px;
-    }    @media (max-width: 768px) {
-      .hero {
-        background-position: top;
-        height: 60vh;
-      }
-
-      .hero-overlay h1 {
-        font-size: 24px;
-      }
-
-      .whatsapp-button {
-        font-size: 14px;
-        padding: 10px 20px;
-      }
-    } .hero {
-  position: relative;
-  width: 100%;
-  height: 80vh;
-  background-image: url('hero-header.jpg');
-  background-size: cover;
-  background-position: center top;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-@media (max-width: 768px) {
-  .hero {
-    height: 65vh;
-    background-position: center top;
-  }
-  .hero-overlay {
-    padding: 10px;
-  }
-  .hero-overlay h1 {
-    font-size: 20px;
-  }
-  .whatsapp-button {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-}
+      margin-top: 20px;
+    }
+    @media (max-width: 768px) {
+      .hero {height: 65vh;}
+      .hero-overlay h1 {font-size: 24px;}
+      .whatsapp-button {font-size: 14px; padding: 10px 20px;}
+    }
   </style>
 </head>
 <body>
 
-  <!-- 1. Hero Section with logo and background -->
-  <div class="hero">
-    <div class="hero-overlay">
-      <h1>Watch At Home</h1>
-      <a href="form.html" style="
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: #28a745;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 10px;
-">
-  👉 Get Started — Fill the Form
-</a>
-    </div>
+<!-- Hero Section -->
+<div class="hero">
+  <div class="hero-overlay">
+    <h1>Watch At Home</h1>
+    <a href="form.html" class="whatsapp-button">👉 Get Started — Fill the Form</a>
   </div>
+</div>
 
-  <!-- 2. Welcome Section -->
-  <div class="section">
-    <h2>Welcome to Watch At Home</h2>
-    <p>Your gateway to world-class entertainment — Anytime, Anywhere!</p>
-<a href="https://wa.me/201557572768"
-   id="whatsapp-button"
-   target="_blank"
-   style="text-decoration: none; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
-   Contact us on WhatsApp
-</a>
+<!-- Welcome -->
+<div class="section">
+  <h2>Welcome to Watch At Home</h2>
+  <p>Your gateway to world-class entertainment — Anytime, Anywhere!</p>
+  <a href="https://wa.me/201557572768" class="whatsapp-button" id="whatsapp-button">Contact us on WhatsApp</a>
+</div>
 
 <script>
   document.getElementById('whatsapp-button').addEventListener('click', function() {
@@ -170,172 +123,83 @@
       (new Image()).src = 'https://www.facebook.com/tr?id=1135814355246646&ev=Contact&noscript=1';
     }
   });
-</script>\>
+</script>
 
- </div>
-<!-- 8. Promo Video Section -->
+<!-- Promo Video -->
 <div class="section box">
   <h2>Watch Our Promo Video</h2>
-  <video width="100%" height="auto" controls poster="Watch At Home.png" onended="this.currentTime=0;">
-  <source src="Untitled Project800.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-</div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>WAH Fire Stick Offers</title>
-  <style>
-    
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 0 0 20px #ffaa00;
-    }
-  </style>
-</head>
-<body>
- <div style="text-align: center; padding: 20px;">
-  <div style="display: flex; justify-content: center; padding: 30px 0;">
-  <img src="WAH%20Offers.png" alt="Watch At Home Fire Stick Offers"
-       style="max-width: 90%; width: 800px; height: auto; border-radius: 20px; box-shadow: 0 0 30px #ffaa00;">
-</div>
- <img src="images/your-image-name.jpg" style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 0 20px #ffaa00;" />
-   
+  <video controls poster="Watch At Home.png">
+    <source src="Untitled Project800.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 </div>
 
-</body>
-</html>
-
-<!-- Fire Stick Offer Promo Video -->
+<!-- Fire Stick Offers -->
 <div class="section box">
-  <h2>Fire Stick 4K Max – Promo</h2>
-  <p>Upgrade your entertainment experience with this exclusive offer!</p>
-  <video width="100%" height="auto" controls poster="Fire Stick Watch At Home.png" onended="this.currentTime=0;">
-  <source src="https://raw.githubusercontent.com/WatchAtHome/watchathome.github.io/main/fire%20stick%20offer.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+  <h2>Special Offer: All-In-One TV Solution</h2>
+  <p>Get the <strong>Amazon Fire Stick 4K Max</strong> with <strong>1-Year Full Access</strong></p>
+  <p style="font-size:20px; color:#008000; font-weight:bold;">All for just EGP 6,500</p>
+  <p style="font-size:15px; color:#777;">Annual Renewal: <strong>$35/year</strong></p>
+  <a href="https://wa.me/201557572768" class="whatsapp-button">Order Now on WhatsApp</a>
 </div>
 
-
-  <!-- 4. Fire Stick Offer -->
-  <div class="section box">
-    <h2>Special Offer   All-In-One TV Solution</h2>
-    <p>
-      Get the <strong>Amazon Fire Stick 4K Max</strong><br>
-      with <strong>1-Year Full Access</strong> to movies, series, live sports & international channels
-    </p>
-    <p style="font-size:20px; color:#008000; font-weight:bold;">All for just EGP 6,500</p>
-    <p style="font-size:15px; color:#777;">Annual Renewal: <strong>$35/year</strong></p>
-    <a href="https://wa.me/201557572768" class="whatsapp-button">Order Now on WhatsApp</a>
-  </div>
-<!-- Updated Recommended Apps Section -->
+<!-- Recommended Apps -->
 <div class="section box">
-  <h2>Recommended Apps for Watching</h2>
-  <p>Use these trusted apps to enjoy your subscription on any device:</p>
-
+  <h2>Recommended Apps</h2>
   <ul style="text-align: left; max-width: 700px; margin: auto; font-size: 16px; line-height: 1.8;">
     <li>📺 <strong>Android TV / Fire Stick:</strong>
       <a href="https://www.iptvsmarters.com/smarters.apk" target="_blank">IPTV Smarters Pro</a>,
       <a href="https://www.tivimate.com/tivi.apk" target="_blank">TiviMate</a>,
       <a href="https://xciptvplayer.com/xciptv.apk" target="_blank">XCIPTV</a>
     </li>
-    <li>📱 <strong>Android Phones & Tablets:</strong>
-      <a href="https://play.google.com/store/apps/details?id=com.nst.iptvsmarterstvbox" target="_blank">IPTV Smarters</a>,
-      <a href="https://play.google.com/store/apps/details?id=com.ott.televizo" target="_blank">Televizo</a>,
-      <a href="https://xciptvplayer.com/xciptv.apk" target="_blank">XCIPTV</a>
+    <li>📱 <strong>Android Phones:</strong>
+      <a href="https://play.google.com/store/apps/details?id=com.nst.iptvsmarterstvbox" target="_blank">IPTV Smarters</a>
     </li>
-    <li>📘 <strong>iPhone / iPad (iOS):</strong>
+    <li>🍏 <strong>iPhone / iPad:</strong>
       <a href="https://apps.apple.com/us/app/smarters-player-lite/id1628995509" target="_blank">Smarters Player Lite</a>
     </li>
-    <li>🖥️ <strong>Samsung / LG Smart TVs:</strong>
+    <li>🖥️ <strong>Smart TVs:</strong>
       <a href="https://www.smartoneiptv.com" target="_blank">SmartOne IPTV</a>,
-      <a href="https://www.netiptv.eu" target="_blank">Net IPTV</a>,
-      <a href="https://www.setiptv.net" target="_blank">Set IPTV</a>
+      <a href="https://www.netiptv.eu" target="_blank">Net IPTV</a>
     </li>
-    <li>🌐 <strong>General Streaming Apps:</strong>
-  <a href="netflix_install.html" target="_blank" style="display: inline-block; background-color: #e50914; color: white; padding: 14px 28px; margin-top: 20px; text-decoration: none; font-size: 20px; border-radius: 10px;">
-  ⬇️ Download Netflix for Fire Stick
-</a>
-
-  <a href="https://watchathome.github.io/youtube_firestick_compatible.apk" target="_blank">YouTube (Fire Stick)</a>
-</li>
-
   </ul>
-
-  <p style="margin-top: 25px;">Need help installing any of these apps?</p>
-  <a href="https://wa.me/201557572768" class="whatsapp-button">Get Setup Help on WhatsApp</a>
 </div>
 
-  <!-- How to Set Up Section -->
+<!-- Setup Instructions -->
 <div class="section box">
-  <h2>How to Set Up Your Device</h2>
-  <p>Follow these simple steps to install and start watching in minutes:</p>
-
-  <h3 style="margin-top: 20px;">📺 For Fire TV Stick 4K (2nd Gen):</h3>
+  <h2>How to Set Up</h2>
   <ol style="text-align: left; max-width: 700px; margin: auto; font-size: 16px; line-height: 1.8;">
-    <li>Go to <strong>Settings > My Fire TV > Developer Options</strong>, and enable <strong>Apps from Unknown Sources</strong>.</li>
-    <li>Open the <strong>Downloader</strong> app (install it from Amazon Appstore if needed).</li>
-    <li>Enter the following link to install IPTV Smarters Pro:<br><code>https://www.iptvsmarters.com/smarters.apk</code></li>
-    <li>Once installed, open the app and enter your login details.</li>
-    <li>To install YouTube or Netflix, go to the <strong>Amazon Appstore</strong> and search for them directly.</li>
+    <li>Go to <strong>Settings > My Fire TV > Developer Options</strong></li>
+    <li>Install <strong>Downloader</strong> from Appstore</li>
+    <li>Open Downloader and enter:<br><code>https://www.iptvsmarters.com/smarters.apk</code></li>
+    <li>Install and open the app</li>
   </ol>
-
-  <p style="margin-top: 25px;">Need help installing or setting up?</p>
-  <a href="https://wa.me/201557572768" class="whatsapp-button">Chat with us on WhatsApp</a>
 </div>
 
+<!-- Coming Soon -->
+<div class="section box">
+  <h2>Hotel Packages (Coming Soon)</h2>
+  <p>Customized offers for resorts and hotels</p>
+</div>
 
-  <!-- 5. Placeholder for Future Hotel Section -->
-  <div class="section box">
-    <h2>Hotel Packages (Coming Soon)</h2>
-    <p>Customized offers for resorts and hotels – Streamline your guest entertainment experience.</p>
-  </div>
+<!-- YouTube -->
+<div class="section">
+  <h2>Follow us on YouTube</h2>
+  <a href="https://www.youtube.com/@YOUR_CHANNEL" class="whatsapp-button" target="_blank">Subscribe Now</a>
+</div>
 
-  <!-- 6. Subscribe Section -->
-  <div class="section">
-    <h2>Subscribe to our Channel</h2>
-    <p>Stay updated with our latest offers and tutorials on YouTube.</p>
-    <a href="https://www.youtube.com/@YOUR_CHANNEL" class="whatsapp-button" target="_blank">Subscribe Now</a>
-  </div>
+<!-- Final Contact -->
+<div class="section">
+  <h2>Need help?</h2>
+  <a href="https://wa.me/201557572768" class="whatsapp-button">Chat on WhatsApp</a>
+</div>
 
-  <!-- 7. Final Contact Section -->
-  <div class="section">
-    <h2>Need help or have questions?</h2>
-    <p>Contact us anytime and we’ll guide you through.</p>
-    <a href="https://wa.me/201557572768" class="whatsapp-button">Chat on WhatsApp</a>
-  </div>
-
+<!-- Tidio Live Chat -->
 <script src="//code.tidio.co/wrfmpyiaxbeci5lfrsn1ejnga6uifvpu.js" async></script>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Watch At Home</title>
 
- <!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-   fbq('init', '1135814355246646'); 
-   fbq('track', 'PageView');
-</script>
-<noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1135814355246646&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
-</head>
-<body>
 </body>
 </html>
+
 
 
 

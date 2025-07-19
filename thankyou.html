@@ -56,6 +56,16 @@
     fbq('track', 'PageView');
     fbq('track', 'Lead');
   </script>
+  <!-- Meta Pixel Lead Tracking -->
+<script>
+  if (typeof fbq === 'function') {
+    fbq('track', 'Lead');
+    console.log('Lead event sent to Meta Pixel');
+  } else {
+    console.log('fbq is not defined');
+  }
+</script>
+
   <noscript>
     <img height="1" width="1" style="display:none"
          src="https://www.facebook.com/tr?id=1135814355246646&ev=PageView&noscript=1"/>

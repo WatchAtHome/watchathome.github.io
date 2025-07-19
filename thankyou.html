@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You – Watch At Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f9f2;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #2e7d32;
+      text-align: center;
+    }
+    .message-box {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="message-box">
+    <h1>Thank You!</h1>
+    <p>Your form has been submitted.<br>We will contact you shortly via WhatsApp and email.</p>
+  </div>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    if (typeof fbq === 'function') {
+      fbq('track', 'Lead');
+    } else {
+      console.log('fbq not found – Lead not fired.');
+    }
+  </script>
+</body>
+</html>

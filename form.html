@@ -77,12 +77,6 @@
     button:hover {
       background-color: #218838;
     }
-    #thanks {
-      display: none;
-      text-align: center;
-      color: green;
-      margin-top: 15px;
-    }
   </style>
 </head>
 <body>
@@ -113,43 +107,13 @@
         <option value="Smart TV">Smart TV</option>
         <option value="TV Box">TV Box</option>
       </select>
-      <input type="hidden" name="_redirect" value="https://watchathome.github.io/thankyou.html">
-      
+
+      <!-- إعادة التوجيه لصفحة الشكر -->
+      <input type="hidden" name="_next" value="https://watchathome.github.io/thankyou.html">
+
       <button type="submit">Send</button>
     </form>
   </div>
-
- <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
-    const thanks = document.getElementById("thanks");
-
-    form.addEventListener("submit", async function (e) {
-      e.preventDefault();
-      const formData = new FormData(form);
-
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        form.reset();
-        thanks.style.display = "block";
-
-        // تشغيل التراك لو fbq متعرفة
-        if (typeof fbq === 'function') {
-          fbq('track', 'Lead');
-        } else {
-          console.log('fbq is not defined');
-        }
-      }
-    });
-  });
-</script>
 
   <!-- Meta Pixel Code -->
   <script>
@@ -169,6 +133,7 @@
     src="https://www.facebook.com/tr?id=1135814355246646&ev=PageView&noscript=1"/>
   </noscript>
   <!-- End Meta Pixel Code -->
+
 </body>
 </html>
 

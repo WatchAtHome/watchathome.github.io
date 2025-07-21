@@ -1,30 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="facebook-domain-verification" content="fb8ul7ng8t7t63jam740dpqqzegz7k" />
   <title>Watch At Home</title>
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: Arial, sans-serif;
-      
       background-color: #f5f5f5;
-      text-align: center;
-      padding-top: 100px;
-    }
-    h1 {
       color: #333;
-      font-size: 32px;
+      text-align: center;
     }
-    p {
-      font-size: 18px;
-      color: #666;
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      background-image: url('https://watchathome.live/hero-header.jpg');
+      background-size: cover;
+      background-position: center top;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.15);
+      width: 100%;
+      padding: 20px;
+    }
+    .hero-overlay h1 {
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .whatsapp-button {
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+    .section p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .box {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #ffaa00;
+    }
+    @media (max-width: 768px) {
+      .hero { height: 65vh; background-position: center top; }
+      .hero-overlay h1 { font-size: 20px; }
+      .whatsapp-button { font-size: 14px; padding: 8px 16px; }
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to Watch At Home</h1>
-  <p>This is your official website landing page.</p>
+
+  <div class="hero"><div class="hero-overlay"></div></div>
+
+  <div class="section">
+    <h2>Level Up with<br><strong>Watch At Home</strong></h2>
+    <p style="font-weight: bold;">Your gateway to world-class entertainment Anytime Anywhere</p>
+    <a href="form.html" class="whatsapp-button" id="whatsapp-button">
+      <img src="fire.gif" style="height: 24px; vertical-align: middle;">
+      Unlock Access
+      <img src="fire.gif" style="height: 24px; vertical-align: middle;">
+    </a>
+  </div>
+
+  <div class="section box">
+    <h2>Watch Our Promo Video</h2>
+    <video width="100%" height="auto" controls poster="https://watchathome.live/watch-at-home.png" onended="this.currentTime=0;">
+      <source src="https://watchathome.live/untitled-project-800.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="section box">
+    <h2>Fire Stick 4K Max – Promo</h2>
+    <p>Upgrade your entertainment experience with this exclusive offer!</p>
+    <video width="100%" height="auto" controls poster="https://watchathome.live/fire-stick-watch-at-home.png" onended="this.currentTime=0;">
+      <source src="https://watchathome.live/fire_stick_offer.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="section box">
+    <img src="https://watchathome.live/WAH_Offers.png" alt="Watch At Home Fire Stick Offers">
+  </div>
+
+  <div class="section box">
+    <h2>Special Offer All-In-One TV Solution</h2>
+    <p>Get the <strong>Amazon Fire Stick 4K Max</strong> with <strong>1-Year Full Access</strong> to movies, series, live sports & international channels</p>
+    <p style="font-size:20px; color:#008000; font-weight:bold;">All for just EGP 6,500</p>
+    <p style="font-size:15px; color:#777;">Annual Renewal: <strong>$35/year</strong></p>
+  </div>
+
+  <div class="section box">
+<h2>🔥 For Amazon Fire Stick</h2>
+<ol style="text-align: left; max-width: 700px; margin: auto; font-size: 16px; line-height: 1.8;">
+  <li>Go to <strong>Settings > My Fire TV > Developer Options</strong>, and enable <strong>Apps from Unknown Sources</strong>.</li>
+  <li>Open the <strong>Downloader</strong> app (install it from Amazon Appstore if needed).</li>
+  <li>
+    Enter the following link to install the Smarters app:
+    <br>
+    <a href="https://watchathome.live/smarters.apk" target="_blank" style="display: inline-block; margin-top: 8px; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
+      📲 Download the Smarters App (blue icon)
+    </a>
+  </li>
+  <li>Once installed, open the app and enter your login details.</li>
+  <li>To install YouTube or Netflix, go to the <strong>Amazon Appstore</strong> and search for them directly.</li>
+</ol>
+</div>
+  <div class="section box">
+    <h2>📺 For Smart TVs</h2>
+    <p style="margin-top: -10px; font-size: 18px; font-weight: bold;">( LG, Samsung )</p>
+    <ol style="text-align: left; max-width: 700px; margin: auto; font-size: 16px; line-height: 1.8;">
+      <li>Open LG Content Store or Samsung Store.</li>
+      <li>Search for <strong>Smarters App</strong>.</li>
+      <li>✅ Look for the one with a dark blue icon labeled <strong>Smarters PRO</strong>.</li>
+      <li>Install, open, and enter your login details.</li>
+    </ol>
+    <p style="color: #dc3545; font-weight: bold;">⚠️ Warning: Avoid similar apps like:</p>
+    <ul style="color: #dc3545; max-width: 700px; margin: auto; font-size: 16px;">
+      <li>Smarters Player Live</li>
+      <li>Max Smarters TV</li>
+    </ul>
+    <p style="color: #dc3545; font-weight: bold;">❌ These are unofficial and may not work.</p>
+    <p>If unsure, send us a screenshot and we’ll assist you ✅</p>
+  </div>
+
+<div class="section box">
+  <h2>📦 For Android Mobiles & TV Boxes</h2>
+  <ol style="text-align: left; max-width: 700px; margin: auto; font-size: 16px; line-height: 1.8;">
+    <li>Make sure your device is connected to the internet.</li>
+    <li>Open the built-in browser or the <strong>Downloader</strong> app (if available).</li>
+    <li>
+      Go to the following link to install the Smarters app:
+      <br>
+      <a href="https://watchathome.live/smarters.apk" target="_blank" style="display: inline-block; margin-top: 8px; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
+        📲 Download the Smarters App (blue icon)
+      </a>
+    </li>
+    <li>Once installed, open the app and enter your login details.</li>
+    <li>To install <strong>YouTube</strong> or <strong>Netflix</strong>, search for them in the App Store or use Google Play Store if available.</li>
+  </ol>
+</div>
+
+<div class="section box">
+  <h2>💻 For Laptops (Windows)</h2>
+  <ol style="text-align: left; max-width: 700px; margin: auto; font-size: 16px; line-height: 1.8;">
+    <li>Download and install the desktop version of the <strong>Smarters App</strong>.</li>
+    <li>Use the link below to get the Windows version:</li>
+    <li>
+      <a href="https://watchathome.live/smarters-desktop.exe" target="_blank" style="display: inline-block; margin-top: 8px; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
+        💻 Download the Smarters App for Windows (.exe)
+      </a>
+    </li>
+    <li>Once downloaded, double-click the file to install the app.</li>
+    <li>After installation, open the app and enter your login details.</li>
+  </ol>
+</div>
+
+  <div class="section box">
+    <h2>📱 For iOS Devices (iPhone / iPad)</h2>
+    <ol style="text-align: left; max-width: 700px; margin: auto; font-size: 16px; line-height: 1.8;">
+      <li>Open App Store and search for <strong>Smarters Player</strong>.</li>
+      <li>✅ Official version has a blue icon and says <strong>Smarters Player</strong>.</li>
+      <li>Install and log in.</li>
+    </ol>
+  </div>
+
+  <div class="section box">
+    <h2>Hotel Packages (Coming Soon)</h2>
+    <p>Customized offers for resorts and hotels – Streamline your guest entertainment experience.</p>
+  </div>
+
+  <div class="section">
+    <h2>Subscribe to our Channel</h2>
+    <p>Stay updated with our latest offers and tutorials on YouTube.</p>
+    <a href="https://www.youtube.com/@YOUR_CHANNEL" class="whatsapp-button" target="_blank">Subscribe Now</a>
+  </div>
+
+  <div class="section">
+    <h2>Need help or have questions?</h2>
+    <p>Contact us anytime and we’ll guide you through.</p>
+    <a href="https://wa.me/201557572768" class="whatsapp-button" id="whatsapp-button">Chat on WhatsApp</a>
+  </div>
+
+  <script>
+    document.getElementById('whatsapp-button').addEventListener('click', function() {
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Contact');
+      } else {
+        (new Image()).src = 'https://www.facebook.com/tr?id=1135814355246646&ev=Contact&noscript=1';
+      }
+    });
+  </script>
+
+  <script src="//code.tidio.co/wrfmpyiaxbeci5lfrsn1ejnga6uifvpu.js" async></script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1135814355246646'); 
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1135814355246646&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
 </body>
 </html>
 
